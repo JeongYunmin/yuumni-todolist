@@ -34,6 +34,22 @@ const MainCover = () => {
           <span className="typing_cursor"></span>
         </div>
       </section>
+      <section className="scroll_container">
+        <span className="scroll_msg">If you right, scroll !</span>
+        <div className="scroll_arrow_A">
+          <div className="downward_arrow_left_A"></div>
+          <div className="downward_arrow_right_A"></div>
+        </div>
+        <div className="scroll_arrow_B">
+          <div className="downward_arrow_left_B"></div>
+          <div className="downward_arrow_right_B"></div>
+        </div>
+      </section>
+      <img
+        className="paper_texture"
+        src="assets/찢어진 종이.png"
+        alt="찢어진 종이 질감"
+      />
     </div>
   );
 };
