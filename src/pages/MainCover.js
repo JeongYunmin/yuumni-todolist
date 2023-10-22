@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/MainCover.css";
 
 const MainCover = () => {
   return (
@@ -44,6 +45,11 @@ const MainCover = () => {
           <div className="downward_arrow_left_B"></div>
           <div className="downward_arrow_right_B"></div>
         </div>
+      </section>
+      <section className="deco_square">
+        <div className="brown_deco_square"></div>
+        <div className="green_deco_square"></div>
+        <div className="gray_deco_square"></div>
       </section>
       <img
         className="paper_texture"
