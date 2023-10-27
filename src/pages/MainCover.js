@@ -37,13 +37,15 @@ const MainCover = () => {
       </section>
       <section className="scroll_container">
         <span className="scroll_msg">If you right, scroll !</span>
-        <div className="scroll_arrow_A">
-          <div className="downward_arrow_left_A"></div>
-          <div className="downward_arrow_right_A"></div>
-        </div>
-        <div className="scroll_arrow_B">
-          <div className="downward_arrow_left_B"></div>
-          <div className="downward_arrow_right_B"></div>
+        <div className="scroll_arrow_center">
+          <div className="scroll_arrow_A">
+            <div className="downward_arrow_left_A"></div>
+            <div className="downward_arrow_right_A"></div>
+          </div>
+          <div className="scroll_arrow_B">
+            <div className="downward_arrow_left_B"></div>
+            <div className="downward_arrow_right_B"></div>
+          </div>
         </div>
       </section>
       <section className="deco_square">
