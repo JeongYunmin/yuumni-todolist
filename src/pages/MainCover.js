@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../styles/MainCover.css";
 
 const MainCover = () => {
+  const handleClickScrollBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="MainCover">
       <section className="typing_line">
@@ -36,8 +43,10 @@ const MainCover = () => {
         </div>
       </section>
       <section className="scroll_container">
-        <span className="scroll_msg">If you right, scroll !</span>
-        <div className="scroll_arrow_center">
+        <span onClick={handleClickScrollBottom} className="scroll_msg">
+          If you right, scroll !
+        </span>
+        <div onClick={handleClickScrollBottom} className="scroll_arrow_center">
           <div className="scroll_arrow_A">
             <div className="downward_arrow_left_A"></div>
             <div className="downward_arrow_right_A"></div>
