@@ -17,28 +17,28 @@ const Header = () => {
       ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) &&
       month === 2
     ) {
-      if (date <= 28) {
+      if (date < 29) {
         setDate(date + 1);
       } else {
         setMonth(month + 1);
         setDate(1);
       }
     } else if (month === 2) {
-      if (date <= 27) {
+      if (date < 28) {
         setDate(date + 1);
       } else {
         setMonth(month + 1);
         setDate(1);
       }
     } else if (longDayMonth.includes(month)) {
-      if (date <= 30) {
+      if (date < 31) {
         setDate(date + 1);
       } else {
         setMonth(month + 1);
         setDate(1);
       }
     } else {
-      if (date <= 29) {
+      if (date < 30) {
         setDate(date + 1);
       } else {
         setMonth(month + 1);

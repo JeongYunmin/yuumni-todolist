@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Btn.css";
 
 const Btn = ({ type, onClick }) => {
   let btnLetter = "";
@@ -13,7 +14,9 @@ const Btn = ({ type, onClick }) => {
 
   return (
     <div className="Btn">
-      <button onClick={onClick}>{btnLetter}</button>
+      <button onClick={onClick} className={type}>
+        {btnLetter}
+      </button>
     </div>
   );
 };

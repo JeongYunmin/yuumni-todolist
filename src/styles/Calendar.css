@@ -1,0 +1,77 @@
+.header.row {
+  display: flex;
+  width: 600px;
+  height: 65px;
+}
+
+.col.col-start {
+  flex-grow: 5;
+}
+
+.col.col-start .text {
+  font-size: 18px;
+  line-height: 65px;
+  color: rgb(68, 68, 68);
+}
+
+.col.col-start .text .text.month {
+  font-size: 35px;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 15px;
+  color: white;
+}
+
+.col.col-end {
+  display: flex;
+  align-items: end;
+  gap: 11px;
+  padding-right: 27px;
+  padding-bottom: 11px;
+}
+
+.days.row {
+  display: flex;
+  height: 35px;
+}
+
+.days.row .col {
+  width: calc(600px / 7);
+  text-align: center;
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(232, 232, 232);
+}
+
+.body {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body .row {
+  display: flex;
+  height: 55px;
+}
+
+.body .row .col.cell.selected,
+.body .row .col.cell.disabled,
+.body .row .col.cell.valid {
+  width: calc(600px / 7);
+  font-size: 18px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.body .row .col.cell.selected {
+  color: white;
+}
+
+.body .row .col.cell.disabled {
+  color: rgb(68, 68, 68);
+}
+
+.body .row .col.cell.valid {
+  color: white;
+}
