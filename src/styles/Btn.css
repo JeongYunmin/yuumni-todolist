@@ -5,6 +5,7 @@ button.remove {
   width: 30px;
   height: 26px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 button.left,
