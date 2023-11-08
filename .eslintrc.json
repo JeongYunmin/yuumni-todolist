@@ -9,7 +9,6 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
-    "some-other-config-you-use",
     "prettier"
   ],
   "plugins": [
