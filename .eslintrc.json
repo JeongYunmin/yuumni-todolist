@@ -2,26 +2,21 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true
+    "es2023": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "eslint-config-prettier"
   ],
-  "plugins": [
-    "eslint-config-prettier",
-    "eslint-plugin-prettier",
-    "eslint-plugin-react"
-  ],
+  "plugins": ["eslint-plugin-prettier", "eslint-plugin-react"],
   "parserOptions": {
-    "ecmaVersion": "latest",
+    "ecmaVersion": 2023,
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off",
     "semi": ["error", "always"]

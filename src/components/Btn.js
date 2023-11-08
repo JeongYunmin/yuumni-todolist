@@ -10,6 +10,8 @@ const Btn = ({ type, onClick }) => {
     btnLetter = ">";
   } else if (type === "remove") {
     btnLetter = "X";
+  } else if (type === "create") {
+    btnLetter = "+";
   }
 
   return (
@@ -19,6 +21,11 @@ const Btn = ({ type, onClick }) => {
       </button>
     </div>
   );
+};
+
+Btn.defaultProps = {
+  type: "remove",
+  onClick: null,
 };
 
 export default Btn;
