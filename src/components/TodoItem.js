@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import "../styles/TodoItem.css";
 
 const TodoItem = ({ el, onClickChecked }) => {
   const [checked, setChecked] = useState(false);

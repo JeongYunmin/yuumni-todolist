@@ -1,0 +1,13 @@
+.TodoItem li {
+  list-style: none;
+  height: 40px;
+  font-size: 22px;
+  padding: 5px;
+  color: #474747;
+  display: flex;
+}
+
+.TodoItem li input {
+  width: 22px;
+  height: 22px;
+}

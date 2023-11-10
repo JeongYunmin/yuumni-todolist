@@ -1,0 +1,22 @@
+.CreateInput {
+  width: 600px;
+}
+
+.CreateInput form {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.CreateInput input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.CreateInput input:focus {
+  outline: none;
+}
