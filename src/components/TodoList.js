@@ -6,13 +6,14 @@ const TodoList = () => {
   const [todos, setTodos] = useState([]);
 
   const handleCreateTodo = (content) => {
-    // 수정: content를 매개변수로 받음
-    const newTodo = {
-      id: todos.length,
-      content: content, // 수정: content를 사용하여 새로운 todo 생성
-      isDone: false,
-    };
-    setTodos([newTodo, ...todos]);
+    if (content !== "") {
+      const newTodo = {
+        id: todos.length,
+        content: content,
+        isDone: false,
+      };
+      setTodos([newTodo, ...todos]);
+    }
   };
 
   const handleClickChecked = (id) => {
