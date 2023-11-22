@@ -19,7 +19,7 @@ const TodoList = ({ selectedDate }) => {
         id: todos.length,
         content: content,
         isDone: false,
-        createdAt: getFormattedDate(new Date()),
+        createdAt: getFormattedDate(new Date(selectedDate)),
       };
       setTodos([...todos, newTodo]);
     }
