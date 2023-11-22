@@ -12,7 +12,7 @@ const TodoList = () => {
         content: content,
         isDone: false,
       };
-      setTodos([newTodo, ...todos]);
+      setTodos([...todos, newTodo]);
     }
   };
 
@@ -23,8 +23,6 @@ const TodoList = () => {
       )
     );
   };
-
-  console.log(todos);
 
   return (
     <div className="TodoList">
