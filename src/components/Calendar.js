@@ -110,8 +110,8 @@ export const Calendar = ({ parentState, onChildChange }) => {
   };
   const onDateClick = (day) => {
     setSelectedDate(day);
-    onChildChange(day);
   };
+  onChildChange(selectedDate);
 
   return (
     <div className="Calendar">
