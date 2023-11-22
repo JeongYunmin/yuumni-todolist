@@ -75,3 +75,25 @@
 .body .row .col.cell.valid {
   color: white;
 }
+
+div.col.cell.selected {
+  position: relative;
+}
+
+div.col.cell.selected::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  right: 13px;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: 5px dotted;
+  border-radius: 50%;
+}
+
+div.col.cell.itsToday {
+  color: rgb(181, 79, 42) !important;
+  font-weight: 800 !important;
+}

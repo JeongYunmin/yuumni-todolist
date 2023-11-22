@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { addMonths, format, subMonths } from "date-fns";
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from "date-fns";
-import { isSameMonth, isSameDay, addDays, parse } from "date-fns";
+import { isSameMonth, isSameDay, addDays } from "date-fns";
 import Btn from "./Btn";
 import "../styles/Calendar.css";
 
@@ -43,6 +43,9 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
   const startDate = startOfWeek(monthStart);
   const endDate = endOfWeek(monthEnd);
 
+  const today = useRef(new Date().getDate());
+  const month = useRef(new Date().getMonth() + 1);
+
   const rows = [];
   let days = [];
   let day = startDate;
@@ -62,9 +65,14 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
               : format(currentMonth, "M") !== format(day, "M")
               ? "not-valid"
               : "valid"
+          } ${
+            cloneDay.getDate() === today.current &&
+            cloneDay.getMonth() + 1 === month.current
+              ? "itsToday"
+              : "notToday"
           }`}
           key={day}
-          onClick={() => onDateClick(parse(cloneDay))}
+          onClick={() => onDateClick(cloneDay)}
         >
           <span
             className={
@@ -90,7 +98,7 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
   return <div className="body">{rows}</div>;
 };
 
-export const Calendar = () => {
+export const Calendar = ({ parentState, onChildChange }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -102,6 +110,7 @@ export const Calendar = () => {
   };
   const onDateClick = (day) => {
     setSelectedDate(day);
+    onChildChange(day);
   };
 
   return (

@@ -2,7 +2,15 @@ import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 import CreateInput from "./CreateInput";
 
-const TodoList = () => {
+const getFormattedDate = (date) => {
+  return {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    date: date.getDate(),
+  };
+};
+
+const TodoList = ({ selectedDate }) => {
   const [todos, setTodos] = useState([]);
 
   const handleCreateTodo = (content) => {
@@ -11,6 +19,7 @@ const TodoList = () => {
         id: todos.length,
         content: content,
         isDone: false,
+        createdAt: getFormattedDate(new Date()),
       };
       setTodos([...todos, newTodo]);
     }
@@ -24,10 +33,19 @@ const TodoList = () => {
     );
   };
 
+  const filteredTodos = todos.filter((todo) => {
+    const selectedDateFormatted = getFormattedDate(new Date(selectedDate));
+    return (
+      todo.createdAt.year === selectedDateFormatted.year &&
+      todo.createdAt.month === selectedDateFormatted.month &&
+      todo.createdAt.date === selectedDateFormatted.date
+    );
+  });
+
   return (
     <div className="TodoList">
       <CreateInput handleCreateTodo={handleCreateTodo} />
-      {todos.map((el) => (
+      {filteredTodos.map((el) => (
         <TodoItem key={el.id} el={el} onClickChecked={handleClickChecked} />
       ))}
     </div>
