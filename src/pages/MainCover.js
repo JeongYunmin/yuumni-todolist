@@ -62,11 +62,6 @@ const MainCover = () => {
         <div className="green_deco_square"></div>
         <div className="gray_deco_square"></div>
       </section>
-      <img
-        className="paper_texture"
-        src="assets/찢어진 종이.png"
-        alt="찢어진 종이 질감"
-      />
     </div>
   );
 };

@@ -7,7 +7,9 @@ import PlanningPage from "./pages/PlanningPage";
 function App() {
   return (
     <>
-      <MainCover />
+      <div className="MainCover_container">
+        <MainCover />
+      </div>
       <PlanningPage />
     </>
   );
