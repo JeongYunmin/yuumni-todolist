@@ -66,6 +66,11 @@
 
 .body .row .col.cell.selected {
   color: white;
+  cursor: pointer;
+}
+
+.body .row .col.cell.selected:hover {
+  font-weight: 800;
 }
 
 .body .row .col.cell.disabled {
@@ -74,6 +79,11 @@
 
 .body .row .col.cell.valid {
   color: white;
+  cursor: pointer;
+}
+
+.body .row .col.cell.valid:hover {
+  font-weight: 800;
 }
 
 div.col.cell.selected {
@@ -96,4 +106,8 @@ div.col.cell.selected::before {
 div.col.cell.itsToday {
   color: rgb(181, 79, 42) !important;
   font-weight: 800 !important;
+}
+
+div.col.cell.itsToday:hover {
+  color: rgb(238, 108, 60) !important;
 }
