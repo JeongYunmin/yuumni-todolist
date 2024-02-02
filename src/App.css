@@ -2,5 +2,10 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  position: relative;
+}
+
+.PlanningPage_container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }

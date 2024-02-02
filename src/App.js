@@ -10,7 +10,9 @@ function App() {
       <div className="MainCover_container">
         <MainCover />
       </div>
-      <PlanningPage />
+      <div className="PlanningPage_container">
+        <PlanningPage />
+      </div>
     </>
   );
 }

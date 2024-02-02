@@ -6,7 +6,7 @@
   width: 1200px;
   height: 100vh;
   box-sizing: border-box;
-  padding: 60px;
+  padding: 80px;
 
   background: linear-gradient(8deg, #468c9a 53%, rgb(133, 191, 233));
   /* overflow: hidden; */
@@ -154,7 +154,7 @@
 .MainCover .scroll_container {
   position: absolute;
   left: 0;
-  bottom: 10vh;
+  bottom: 8vh;
   z-index: 3;
 
   display: flex;
@@ -246,7 +246,7 @@
 
 .MainCover .brown_deco_square {
   position: absolute;
-  top: -220px;
+  top: -240px;
   right: 20px;
 
   width: 680px;
@@ -261,7 +261,7 @@
 
 .MainCover .green_deco_square {
   position: absolute;
-  top: 110px;
+  top: 90px;
   right: -100px;
 
   width: 453.5px;
@@ -276,7 +276,7 @@
 
 .MainCover .gray_deco_square {
   position: absolute;
-  top: -190px;
+  top: -210px;
   left: -150px;
 
   width: 831.5px;
