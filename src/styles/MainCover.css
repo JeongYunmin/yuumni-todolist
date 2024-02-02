@@ -6,7 +6,7 @@
   width: 1200px;
   height: 100vh;
   box-sizing: border-box;
-  padding: 150px;
+  padding: 60px;
 
   background: linear-gradient(8deg, #468c9a 53%, rgb(133, 191, 233));
   /* overflow: hidden; */
@@ -154,7 +154,7 @@
 .MainCover .scroll_container {
   position: absolute;
   left: 0;
-  bottom: 12vh;
+  bottom: 10vh;
   z-index: 3;
 
   display: flex;
@@ -247,10 +247,10 @@
 .MainCover .brown_deco_square {
   position: absolute;
   top: -220px;
-  right: 110px;
+  right: 20px;
 
-  width: 45vw;
-  height: 45vw;
+  width: 680px;
+  height: 680px;
   border: 7px solid #4c3f3f;
 
   animation-name: spin;
@@ -262,10 +262,10 @@
 .MainCover .green_deco_square {
   position: absolute;
   top: 110px;
-  right: -3px;
+  right: -100px;
 
-  width: 30vw;
-  height: 30vw;
+  width: 453.5px;
+  height: 453.5px;
   border: 4px solid #1e5b49;
 
   animation-name: spin;
@@ -277,10 +277,10 @@
 .MainCover .gray_deco_square {
   position: absolute;
   top: -190px;
-  left: -10px;
+  left: -150px;
 
-  width: 55vw;
-  height: 55vw;
+  width: 831.5px;
+  height: 831.5px;
   border: 3px solid #b1b1b1;
 
   animation-name: spin-reverse;

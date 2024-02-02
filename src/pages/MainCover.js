@@ -44,7 +44,7 @@ const MainCover = () => {
       </section>
       <section className="scroll_container">
         <span onClick={handleClickScrollBottom} className="scroll_msg">
-          If you right, scroll !
+          If you right, click !
         </span>
         <div onClick={handleClickScrollBottom} className="scroll_arrow_center">
           <div className="scroll_arrow_A">
