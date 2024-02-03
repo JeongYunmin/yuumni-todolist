@@ -1,11 +1,15 @@
 .MainCover_container {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .PlanningPage_container {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+div.root {
+  width: 100vw;
 }
