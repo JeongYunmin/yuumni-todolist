@@ -1,6 +1,6 @@
 .header.row {
   display: flex;
-  width: 600px;
+  width: 450px;
   height: 65px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .col.col-start .text {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 65px;
   color: rgb(68, 68, 68);
 }
@@ -17,7 +17,7 @@
 .col.col-start .text .text.month {
   font-size: 35px;
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 18px;
   margin-right: 15px;
   color: white;
 }
@@ -26,13 +26,14 @@
   display: flex;
   align-items: end;
   gap: 11px;
-  padding-right: 27px;
-  padding-bottom: 11px;
+  padding-right: 18px;
+  padding-bottom: 15px;
 }
 
 .days.row {
   display: flex;
   height: 35px;
+  width: 450px;
 }
 
 .days.row .col {
@@ -45,7 +46,7 @@
 }
 
 .body {
-  width: 600px;
+  width: 450px;
   display: flex;
   flex-direction: column;
 }
@@ -94,12 +95,12 @@ div.col.cell.selected::before {
   content: "";
   display: block;
   position: absolute;
-  top: -2px;
-  right: 13px;
-  width: 50px;
-  height: 50px;
+  top: 6px;
+  right: 10px;
+  width: 37px;
+  height: 37px;
   color: white;
-  border: 5px dotted;
+  border: 4px dotted;
   border-radius: 50%;
 }
 

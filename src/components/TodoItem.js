@@ -22,7 +22,7 @@ const TodoItem = ({ el, onClickChecked }) => {
   return (
     <div className="TodoItem">
       <li className={deleteLine}>
-        {el.content}
+        ◆ {el.content}
         <input
           id={el.id}
           type="checkbox"
