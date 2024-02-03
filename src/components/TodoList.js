@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 import CreateInput from "./CreateInput";
+import "../styles/TodoList.css";
 
 const getFormattedDate = (date) => {
   return {
