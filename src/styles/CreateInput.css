@@ -1,5 +1,9 @@
 .CreateInput {
   width: 500px;
+
+  position: absolute;
+  top: 100px;
+  right: 90px;
 }
 
 .CreateInput form {

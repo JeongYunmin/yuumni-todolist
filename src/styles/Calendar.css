@@ -1,3 +1,9 @@
+div.Calendar {
+  position: absolute;
+  top: 100px;
+  left: 90px;
+}
+
 .header.row {
   display: flex;
   width: 450px;
