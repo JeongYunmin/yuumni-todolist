@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "../styles/TodoItem.css";
 
 const TodoItem = ({ el, onClickChecked }) => {
-  const [deleteLine, setDeleteLine] = useState("");
-
   const handleChange = () => {
     if (el.isDone) {
       onClickChecked(el.id);
