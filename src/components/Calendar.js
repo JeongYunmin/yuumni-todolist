@@ -108,9 +108,13 @@ export const Calendar = ({ parentState, onChildChange }) => {
   const nextMonth = () => {
     setCurrentMonth(addMonths(currentMonth, 1));
   };
+
   const onDateClick = (day) => {
-    setSelectedDate(day);
+    if (day.getMonth() + 1 === currentMonth.getMonth() + 1) {
+      setSelectedDate(day);
+    }
   };
+
   onChildChange(selectedDate);
 
   return (
