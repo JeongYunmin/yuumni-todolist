@@ -17,7 +17,7 @@ const TodoList = ({ selectedDate }) => {
   const handleCreateTodo = (content) => {
     if (content !== "") {
       const newTodo = {
-        id: todos.length,
+        id: Date.now(), // 고유한 id 생성
         content: content,
         isDone: false,
         createdAt: getFormattedDate(new Date(selectedDate)),
@@ -46,8 +46,12 @@ const TodoList = ({ selectedDate }) => {
   return (
     <div className="TodoList">
       <CreateInput handleCreateTodo={handleCreateTodo} />
-      {filteredTodos.map((el) => (
-        <TodoItem key={el.id} el={el} onClickChecked={handleClickChecked} />
+      {filteredTodos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          todo={todo}
+          onClickChecked={handleClickChecked}
+        />
       ))}
     </div>
   );
