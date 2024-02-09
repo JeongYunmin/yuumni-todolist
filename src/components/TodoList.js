@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoItem from "./TodoItem";
 import CreateInput from "./CreateInput";
 import "../styles/TodoList.css";
@@ -12,17 +12,24 @@ const getFormattedDate = (date) => {
 };
 
 const TodoList = ({ selectedDate }) => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const storedTodos = localStorage.getItem("todos");
+    return storedTodos ? JSON.parse(storedTodos) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleCreateTodo = (content) => {
-    if (content !== "") {
+    if (content.trim() !== "") {
       const newTodo = {
-        id: Date.now(), // 고유한 id 생성
+        id: Date.now(),
         content: content,
         isDone: false,
         createdAt: getFormattedDate(new Date(selectedDate)),
       };
-      setTodos([...todos, newTodo]);
+      setTodos((prevTodos) => [...prevTodos, newTodo]);
     }
   };
 
