@@ -22,7 +22,7 @@ const TodoList = ({ selectedDate }) => {
   }, [todos]);
 
   const handleCreateTodo = (content) => {
-    if (content.trim() !== "") {
+    if (content !== "") {
       const newTodo = {
         id: Date.now(),
         content: content,
