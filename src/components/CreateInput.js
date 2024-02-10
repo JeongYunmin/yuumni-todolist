@@ -23,7 +23,7 @@ const CreateInput = ({ handleCreateTodo }) => {
           onChange={handleChange}
           value={inputValue}
         />
-        <Btn type="create">Create</Btn>
+        <Btn type="create" onClick={handleCreateTodo}></Btn>
       </form>
     </div>
   );
