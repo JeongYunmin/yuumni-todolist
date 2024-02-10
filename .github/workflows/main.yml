@@ -1,0 +1,26 @@
+name: yuumni todolist CI
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: mac-latest     // 빌드 운영체제
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]     // 노드 사용 버전
+
+    steps:
+    - uses: actions/checkout@v3        // 액션 버전 
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm' 
+    - run: npm ci                                  // run : 테스트 내용
+    - run: npm run build --if-present
+    - run: npm test
