@@ -9,8 +9,65 @@
 .TodoItem li input {
   width: 22px;
   height: 22px;
+  cursor: pointer;
 }
 
 li.delete {
   text-decoration: line-through;
+}
+
+div.modal-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  font-size: 17px;
+  text-align: center;
+  line-height: 110px;
+  width: 300px;
+  height: 180px;
+  background-color: #fff;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-shadow: 0 10px 40px #6b6b6b;
+}
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.modal-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 70px;
+}
+
+.modal-yes-btn,
+.modal-no-btn {
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+
+  width: 50px;
+  height: 30px;
+
+  margin: 20px;
+  background-color: #8d9bdd;
+}
+
+.modal-yes-btn:hover,
+.modal-no-btn:hover {
+  background-color: #aeb7e7;
+  cursor: pointer;
 }
