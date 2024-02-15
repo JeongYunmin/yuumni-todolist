@@ -13,23 +13,12 @@ const getFormattedDate = (date) => {
 
 const TodoList = ({ selectedDate }) => {
   const [todos, setTodos] = useState(() => {
-    const storedTodos = [];
-    const keys = Object.keys(localStorage);
-    keys.forEach((key) => {
-      const item = localStorage.getItem(key);
-      if (item) {
-        storedTodos.push(JSON.parse(item));
-      }
-    });
+    const storedTodos = JSON.parse(localStorage.getItem("todos")) || [];
     return storedTodos;
   });
 
   useEffect(() => {
-    if (todos) {
-      todos.forEach((todo) => {
-        localStorage.setItem(String(todo.id), JSON.stringify(todo));
-      });
-    }
+    localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
   const handleCreateTodo = (content) => {
@@ -52,6 +41,12 @@ const TodoList = ({ selectedDate }) => {
     );
   };
 
+  const handleRemove = (id) => {
+    const updatedTodos = todos.filter((item) => item.id !== id);
+    setTodos(updatedTodos);
+    localStorage.setItem("todos", JSON.stringify(updatedTodos)); // 로컬 스토리지에서도 제거
+  };
+
   const filteredTodos =
     todos &&
     todos.filter((todo) => {
@@ -71,9 +66,8 @@ const TodoList = ({ selectedDate }) => {
           <TodoItem
             key={todo.id}
             todo={todo}
-            todos={todos}
-            setTodos={setTodos}
             onClickChecked={handleClickChecked}
+            onRemove={handleRemove} // 삭제 기능 추가
           />
         ))}
     </div>

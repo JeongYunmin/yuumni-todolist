@@ -3,7 +3,7 @@ import "../styles/TodoItem.css";
 import Btn from "./Btn";
 import Modal from "react-modal";
 
-const TodoItem = ({ todo, todos, setTodos, onClickChecked }) => {
+const TodoItem = ({ todo, onClickChecked, onRemove }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleChange = () => {
@@ -19,15 +19,7 @@ const TodoItem = ({ todo, todos, setTodos, onClickChecked }) => {
   };
 
   const handleRemove = () => {
-    const updatedTodos = todos.filter((item) => item.id !== todo.id);
-    setTodos(updatedTodos);
-
-    const keys = Object.keys(localStorage);
-    if (keys.includes(String(todo.id))) {
-      localStorage.removeItem(String(todo.id));
-    }
-
-    closeModal();
+    onRemove(todo.id);
   };
 
   return (
@@ -40,12 +32,12 @@ const TodoItem = ({ todo, todos, setTodos, onClickChecked }) => {
         >
           해당 할 일을 삭제하시겠습니까?
           <div className="modal-btn-wrapper">
-            <buton className="modal-yes-btn" onClick={handleRemove}>
+            <button className="modal-yes-btn" onClick={handleRemove}>
               예
-            </buton>
-            <buton className="modal-no-btn" onClick={closeModal}>
+            </button>
+            <button className="modal-no-btn" onClick={closeModal}>
               아니오
-            </buton>
+            </button>
           </div>
         </Modal>
         <li className={todo.isDone ? "delete" : ""}>
