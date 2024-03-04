@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
+import styled, { keyframes, css } from "styled-components";
 import "../styles/MainCover.css";
 
 const MainCover = () => {
+  const firstObj = useRef({});
+  const secondObj = useRef({});
+  const firstLineTextArr = "Do you wanna be".split("");
+  const secondLineTextArr = "a best planner?".split("");
+
+  const TypingEffect = keyframes`
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  `;
+  const TypingSpanFirstLine = styled.span`
+    opacity: 0;
+    animation: forwards ${TypingEffect};
+    ${(props) =>
+      props.delay &&
+      css`
+        animation-delay: ${props.delay}s;
+      `}
+  `;
+  const TypingSpanSecondLine = styled.span`
+    opacity: 0;
+    animation: forwards ${TypingEffect};
+    ${(props) =>
+      props.delay &&
+      css`
+        animation-delay: ${props.delay}s;
+      `}
+  `;
+
   const handleClickScrollBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
@@ -9,36 +38,47 @@ const MainCover = () => {
     });
   };
 
+  (function createRandomNumArr() {
+    const firstLineDelayTime = firstLineTextArr.map(() =>
+      (Math.random() * 1.4).toFixed(2)
+    );
+    const secondLineDelayTime = secondLineTextArr.map(() =>
+      (Math.random() * 2.1 + 1.4).toFixed(2)
+    );
+
+    firstLineDelayTime.sort((a, b) => a - b);
+    secondLineDelayTime.sort((a, b) => a - b);
+
+    firstLineTextArr.forEach((el, i) => {
+      firstObj.current[i] = firstLineDelayTime[i];
+    });
+    secondLineTextArr.forEach((el, i) => {
+      secondObj.current[i] = secondLineDelayTime[i];
+    });
+  })();
+
   return (
     <div className="MainCover">
       <section className="typing_line">
         <div className="typing_line_first">
-          <span>D</span>
-          <span>o</span>&nbsp;
-          <span>y</span>
-          <span>o</span>
-          <span>u</span>&nbsp;
-          <span>w</span>
-          <span>an</span>
-          <span>n</span>
-          <span>a</span>&nbsp;
-          <span>b</span>
-          <span>e</span>
+          {firstLineTextArr.map((el, index) => (
+            <TypingSpanFirstLine
+              key={index}
+              delay={firstObj.current[index] || 0}
+            >
+              {el}
+            </TypingSpanFirstLine>
+          ))}
         </div>
         <div className="typing_line_second">
-          <span>a</span>&nbsp;
-          <span>b</span>
-          <span>e</span>
-          <span>s</span>
-          <span>t</span>&nbsp;
-          <span>p</span>
-          <span>l</span>
-          <span>a</span>
-          <span>n</span>
-          <span>n</span>
-          <span>e</span>
-          <span>r</span>
-          <span>?</span>
+          {secondLineTextArr.map((el, index) => (
+            <TypingSpanSecondLine
+              key={index}
+              delay={secondObj.current[index] || 0}
+            >
+              {el}
+            </TypingSpanSecondLine>
+          ))}
           <span className="typing_cursor"></span>
         </div>
       </section>
