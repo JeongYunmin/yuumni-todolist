@@ -33,6 +33,6 @@ button.remove {
   width: 22px;
   height: 22px;
   line-height: 22px;
-  transform: translate(5px, -1.6px);
+  transform: translate(3px, -1.6px);
   border-radius: 50%;
 }

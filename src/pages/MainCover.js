@@ -38,7 +38,7 @@ const MainCover = () => {
     });
   };
 
-  (function createRandomNumArr() {
+  (function createRandomNum() {
     const firstLineDelayTime = firstLineTextArr.map(() =>
       (Math.random() * 1.4).toFixed(2)
     );
