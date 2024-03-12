@@ -1,8 +1,8 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=468c9a&height=200&section=header&text=윰니의%20투두리스트&fontSize=38" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=468c9a&height=200&section=header&text=윰니의%20투두리스트&fontSize=38&fontColor=ffffff&fontAlign=10&color=gradient&customColorList=0,2,2,5,30" />
 
 ## 🔗 배포링크
 
-<a href="https://yuumni-todolist.web.app/"><img src="public/favicon.ico" width="1rem" />https://yuumni-todolist.web.app/</a>
+<a href="https://yuumni-todolist.web.app/"><img src="public/favicon.ico" />https://yuumni-todolist.web.app/</a>
 
 ## ✨ 프로젝트 소개
 
