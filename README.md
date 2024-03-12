@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=468c9a&height=25&section=header&text=윰니의%20투두리스트&fontSize=20" />
+<img src="https://capsule-render.vercel.app/api?&color=468c9a&height=25&section=header&text=윰니의%20투두리스트&fontSize=20" />
 
 ## 🔗 배포링크
 
