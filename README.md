@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=468c9a&height=200&section=header&text=윰니의%20투두리스트&fontSize=20" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=468c9a&height=200&section=header&text=윰니의%20투두리스트&fontSize=38" />
 
 ## 🔗 배포링크
 
@@ -10,6 +10,6 @@
 
 ## ⏰ 개발 기간
 
-2023-10-23 ~ 계속 진행 중에 있습니다.
+2023 / 10 / 23 ~ 계속 진행 중에 있습니다.
 
 ## 🖥️ 프로젝트 화면
