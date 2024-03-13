@@ -20,8 +20,8 @@
 
 ## 🖥️ 프로젝트 화면
 
-<img width="410" alt="스크린샷 2024-03-13 오전 9 03 17" src="https://github.com/JeongYunmin/yuumni-todolist/assets/125978352/47d5953e-5d10-4f66-9e7e-bba21a02e1b0">  <img width="410" alt="스크린샷 2024-03-13 오전 9 03 28" src="https://github.com/JeongYunmin/yuumni-todolist/assets/125978352/2815f4de-2ef4-4f94-8e4f-911ddfe98d3f">  
+<img width="417" alt="스크린샷 2024-03-13 오전 9 03 17" src="https://github.com/JeongYunmin/yuumni-todolist/assets/125978352/47d5953e-5d10-4f66-9e7e-bba21a02e1b0">  <img width="417" alt="스크린샷 2024-03-13 오전 9 03 28" src="https://github.com/JeongYunmin/yuumni-todolist/assets/125978352/2815f4de-2ef4-4f94-8e4f-911ddfe98d3f">  
 
-<img width="410" alt="스크린샷 2024-03-13 오전 9 08 23" src="https://github.com/JeongYunmin/yuumni-todolist/assets/125978352/381b6045-7947-49fc-aa60-115d054bb865">
+<img width="417" alt="스크린샷 2024-03-13 오전 9 08 23" src="https://github.com/JeongYunmin/yuumni-todolist/assets/125978352/381b6045-7947-49fc-aa60-115d054bb865">
 
 
