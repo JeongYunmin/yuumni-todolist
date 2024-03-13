@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&height=167&section=header&text=✨윰니의%20투두리스트✨&fontSize=35&fontColor=ffffff&color=timeGradient&fontAlignY=55" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=167&section=header&text=✨윰니의%20투두리스트✨&fontSize=35&fontColor=ffffff&color=timeGradient&fontAlignY=50" />
 
 ## <img src="public/favicon.ico" width="20" height="20" /> 배포링크
 
