@@ -39,7 +39,7 @@ const TodoList = ({ selectedDate }) => {
         todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
       )
     );
-  };
+  }; // 위의 클릭체크 함수의 로직에 대해 알아보자!!!!!!!!!!!!!!!!!
 
   const handleRemove = (id) => {
     const updatedTodos = todos.filter((item) => item.id !== id);

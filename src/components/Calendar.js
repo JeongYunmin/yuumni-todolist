@@ -37,7 +37,7 @@ const RenderDays = () => {
   return <div className="days row">{days}</div>;
 };
 
-const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
+const RenderCells = ({ currentMonth, selectedDay, onDateClick }) => {
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(monthStart);
   const startDate = startOfWeek(monthStart);
@@ -60,7 +60,7 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
           className={`col cell ${
             !isSameMonth(day, monthStart)
               ? "disabled"
-              : isSameDay(day, selectedDate)
+              : isSameDay(day, selectedDay)
               ? "selected"
               : format(currentMonth, "M") !== format(day, "M")
               ? "not-valid"
@@ -98,9 +98,9 @@ const RenderCells = ({ currentMonth, selectedDate, onDateClick }) => {
   return <div className="body">{rows}</div>;
 };
 
-export const Calendar = ({ parentState, onChildChange }) => {
+export const Calendar = ({ onChange }) => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDay, setSelectedDay] = useState(new Date());
 
   const prevMonth = () => {
     setCurrentMonth(subMonths(currentMonth, 1));
@@ -111,11 +111,11 @@ export const Calendar = ({ parentState, onChildChange }) => {
 
   const onDateClick = (day) => {
     if (day.getMonth() + 1 === currentMonth.getMonth() + 1) {
-      setSelectedDate(day);
+      setSelectedDay(day);
     }
   };
 
-  onChildChange(selectedDate);
+  onChange(selectedDay);
 
   return (
     <div className="Calendar">
@@ -127,7 +127,7 @@ export const Calendar = ({ parentState, onChildChange }) => {
       <RenderDays />
       <RenderCells
         currentMonth={currentMonth}
-        selectedDate={selectedDate}
+        selectedDay={selectedDay}
         onDateClick={onDateClick}
       />
     </div>

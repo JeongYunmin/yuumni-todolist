@@ -6,13 +6,13 @@ import TodoList from "../components/TodoList";
 const PlanningPage = () => {
   const [selectedDate, setSelectedDate] = useState("");
 
-  const handleChildChange = (childData) => {
-    setSelectedDate(childData);
+  const handleNewTodoDate = (selected) => {
+    setSelectedDate(selected);
   };
 
   return (
     <div className="PlanningPage">
-      <Calendar parentState={selectedDate} onChildChange={handleChildChange} />
+      <Calendar onChange={handleNewTodoDate} />
       <TodoList selectedDate={selectedDate} />
     </div>
   );

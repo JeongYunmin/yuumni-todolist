@@ -6,7 +6,7 @@ const MainCover = () => {
   const firstObj = useRef({});
   const secondObj = useRef({});
   const firstLineTextArr = "Do you wanna be".split("");
-  const secondLineTextArr = "a best planner?".split("");
+  const secondLineTextArr = "the best planner?".split("");
 
   const TypingEffect = keyframes`
     0% { opacity: 0; }
@@ -84,7 +84,7 @@ const MainCover = () => {
       </section>
       <section className="scroll_container">
         <span onClick={handleClickScrollBottom} className="scroll_msg">
-          If you right, click !
+          If you are right, click !
         </span>
         <div onClick={handleClickScrollBottom} className="scroll_arrow_center">
           <div className="scroll_arrow_A">
